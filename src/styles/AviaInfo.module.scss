@@ -1,0 +1,37 @@
+@import 'variables';
+
+.aviaInfo {
+  display: flex;
+  box-shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+
+.tickets {
+  border-right: 1px solid $sixthColor;
+  position: relative;
+  .divider {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    border-top: 1px dashed $thirdColor;
+    width: 90%;
+  }
+  @media (max-width: 1023px) {
+    border-right: none;
+    border-bottom: 1px solid $sixthColor;
+  }
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: $secondColor;
+  padding: 30px;
+  min-height: 100%;
+  align-self: center;
+}

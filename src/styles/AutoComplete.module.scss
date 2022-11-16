@@ -1,0 +1,47 @@
+@import 'variables.scss';
+
+.autocomplete {
+  position: relative;
+}
+
+.input {
+  width: 208px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  &::placeholder {
+    color: $fourColor;
+  }
+}
+
+.suggestions {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  border: 1px solid $secondColor;
+  border-radius: 10px;
+  width: 100%;
+  background-color: $firstColor;
+  overflow: hidden;
+}
+
+.suggestions li {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $secondColor;
+  &.suggestionActive,
+  &:hover {
+    background: $thirdColor;
+    color: $firstColor;
+    cursor: pointer;
+    font-weight: 700;
+  }
+}
+
+.suggestions li:not(:last-of-type) {
+  border-bottom: 1px solid $secondColor;
+}

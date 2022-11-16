@@ -1,0 +1,26 @@
+@import 'variables.scss';
+
+.button {
+  color: $firstColor;
+  background-color: $thirdColor;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 158px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $fifthColor;
+    }
+  }
+  &:disabled {
+    background-color: $fourColor;
+    cursor: default;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $thirdColor;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}

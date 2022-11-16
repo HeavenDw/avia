@@ -1,0 +1,19 @@
+@import 'variables.scss';
+
+.customDateInput {
+  display: flex;
+  background-color: $firstColor;
+  width: 208px;
+  padding: 12px;
+  border-radius: 10px;
+  gap: 5px;
+  cursor: pointer;
+  input {
+    font-size: 14px;
+    font-weight: 700;
+
+    &::placeholder {
+      color: $fourColor;
+    }
+  }
+}

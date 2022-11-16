@@ -1,0 +1,61 @@
+@import 'variables.scss';
+
+.aviaForm {
+  border-radius: 15px;
+}
+
+.top {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background-color: $thirdColor;
+  border-radius: 15px 15px 0px 0px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: $firstColor;
+  font-size: 11px;
+}
+
+.from {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: -25px;
+    top: 35px;
+    width: 25px;
+    border: 1px dashed $firstColor;
+    @media (max-width: 1023px) {
+      top: 100%;
+      left: 50%;
+      width: 0;
+      height: 50px;
+    }
+  }
+}
+
+.bottom {
+  padding: 20px 30px;
+  box-shadow: 0px 0px 14px rgba(112, 121, 153, 0.3);
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+
+.error {
+  color: red;
+}

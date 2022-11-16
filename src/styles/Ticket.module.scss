@@ -1,0 +1,144 @@
+@import 'variables';
+
+.ticket {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  padding: 30px;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12;
+  font-weight: 600;
+  padding: 6px 24px;
+  background-color: #8ba5d8;
+  color: $firstColor;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: $eighthColor;
+  img {
+    width: 40px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pathTime {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  .time {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+  }
+  .city,
+  .date {
+    font-size: 14px;
+    color: $eighthColor;
+  }
+  .city {
+    font-weight: 500;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.middle {
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.objects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: $fourColor;
+}
+
+.line {
+  display: block;
+  height: 1px;
+  width: calc(100% - 16px);
+  transform: translate(8px, 0px);
+  background-color: $fourColor;
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: $fourColor;
+    border-radius: 50%;
+    transform: translate(0px, -50%);
+  }
+  &::before {
+    left: 0;
+    top: 0;
+  }
+  &::after {
+    right: 0;
+    top: 0;
+  }
+}
+
+.inPath {
+  font-size: 14px;
+  color: $fourColor;
+  align-self: center;
+}
+
+.flightInfo {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 767px) {
+    align-items: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @media (max-width: 1023px) {
+    justify-content: center;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.images {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  align-self: flex-start;
+  @media (max-width: 1023px) {
+    align-self: center;
+  }
+}

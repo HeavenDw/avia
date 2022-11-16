@@ -1,0 +1,26 @@
+@import 'variables';
+
+.button {
+  padding: 8px;
+  border-radius: 10px;
+  background-color: $firstColor;
+  border: 1px solid $fourColor;
+  font-size: 14px;
+  color: $eighthColor;
+  transition: all 0.3s ease 0s;
+  span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &.active {
+    padding: 12px 16px;
+    background-color: $sixthColor;
+    color: $secondColor;
+    border: none;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $sixthColor;
+    }
+  }
+}
